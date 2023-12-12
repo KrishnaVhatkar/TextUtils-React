@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-// import About from './components/About';
+import About from './components/About';
 import Alerts from './components/Alerts';
-import TextForm from './components/textForm';
+import TextForm from './components/TextForm';
 
-// import {createBrowserRouter,Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+// import {createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
 // Layouts
 
@@ -53,6 +53,7 @@ function App() {
       <Navbar title="TextUtils" about="About Textutils" mode={mode} toggleMode={toggleMode} />
       <Alerts alert={alert} />
       <TextForm showAlert={showAlert} heading='Enter the Text below' mode={mode} toggleMode={toggleMode} />
+      
       {/* <RouterProvider router={router} /> */}
       
     </>

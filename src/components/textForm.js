@@ -40,10 +40,10 @@ export default function TextForm(props) {
     
         
     return (
-        <>
-        <div className='container'>
+        <div className={`bg-${props.mode}`}>
+        <div className={`container bg-${props.mode}`}>
                 <h1 className={`text-${props.mode==='light'?'dark':'light'}`}>{props.heading}</h1>
-            <div className={`mb-3 ${props.mode==='light'?'dark':'light'}`}>
+            <div className={`mb-3 ${props.mode}`}>
                 <textarea className={`form-control text-${props.mode==='light'?'dark':'light' } bg-${props.mode}`} value={text} onChange={handleOnChange} id='my-box' rows='7'></textarea>
                 <button className="btn btn-primary my-3 mx-1" onClick={changeUpCase}>Change to Uppercase</button>
                 <button className="btn btn-success my-3 mx-1" onClick={changeLoCase}>Change to Lowercase</button>
@@ -60,5 +60,5 @@ export default function TextForm(props) {
             <h2 className={`text-${props.mode==='light'?'dark':'light'}`}>Preview</h2>
             <p className={`text-${props.mode==='light'?'dark':'light'}`}>{text.length>0?text:"Enter Something in above box to preview it here!"}</p>
         </div>
-        </>
+        </div>
     )};
